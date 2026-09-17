@@ -35,4 +35,8 @@ on first load, so no prebuilt binary is committed to this repo.
 
 ## License
 
-See the upstream project for licensing of the original extension and grammar.
+This extension is released under the [MIT License](LICENSE). It began as a fork
+of the original (unlicensed) `pupli/cypher` extension; the highlighting queries
+are being rewritten for Neo4j 4.4, and the MIT license covers this project's own
+code. The bundled `tree-sitter-cypher` grammar is fetched as an external build
+dependency and keeps its own upstream terms.
