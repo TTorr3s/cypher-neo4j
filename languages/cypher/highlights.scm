@@ -28,8 +28,11 @@
 
 ; --- Keywords -------------------------------------------------------------
 [
+  "profile"
+  "explain"
   "match"
   "optional"
+  "foreach"
   "unwind"
   "as"
   "merge"
