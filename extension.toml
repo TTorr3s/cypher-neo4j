@@ -1,0 +1,11 @@
+id = "cypher-neo4j"
+name = "Cypher (Neo4j 4.4)"
+version = "0.0.1"
+schema_version = 1
+authors = ["TTorr3s <is.jesustorres@icloud.com>"]
+description = "Syntax highlighting for the Cypher query language, tuned for Neo4j 4.4 Community Edition."
+repository = "https://github.com/TTorr3s/cypher-neo4j"
+
+[grammars.cypher]
+repository = "https://github.com/pupli/tree-sitter-cypher"
+commit = "775717a2de6ca76a5a75e8076b411dbc1ae4c281"
