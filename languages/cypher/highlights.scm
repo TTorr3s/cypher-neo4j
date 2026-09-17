@@ -10,7 +10,7 @@
 (escaped_char) @string.escape
 (number_literal) @number
 (boolean_literal) @boolean
-(null_literal) @constant
+"null" @constant.builtin
 
 ; --- Identifiers ----------------------------------------------------------
 (variable) @variable
@@ -67,6 +67,22 @@
   "any"
   "none"
   "single"
+
+  ; LOAD CSV
+  "load" "csv" "headers" "from" "fieldterminator"
+  ; USING hints
+  "using" "index" "indexes" "seek" "scan" "join"
+  ; SHOW commands
+  "show" "constraint" "constraints" "function" "functions"
+  "procedure" "procedures" "database" "databases"
+  "transaction" "transactions" "brief" "verbose" "output"
+  "executable" "current" "user" "built" "defined" "populated"
+  "default" "home"
+  ; Schema DDL (CREATE/DROP INDEX | CONSTRAINT)
+  "for" "require" "assert" "if" "drop"
+  "unique" "node" "relationship" "rel" "key" "property"
+  "existence" "exist"
+  "btree" "fulltext" "lookup" "range" "text" "point"
 ] @keyword
 
 ; Boolean / predicate operators that are spelled as words
