@@ -3,8 +3,9 @@
 Syntax highlighting for the [Cypher](https://opencypher.org/) query language in
 [Zed](https://zed.dev), tuned for **Neo4j 4.4 Community Edition**.
 
-Recognizes `.cypher`, `.cql` and `.cyp` files and highlights them using the
-[`tree-sitter-cypher`](https://github.com/pupli/tree-sitter-cypher) grammar.
+Recognizes `.cypher`, `.cql` and `.cyp` files and highlights them using a
+[tree-sitter grammar](https://github.com/TTorr3s/tree-sitter-cypher-neo4j)
+maintained in a companion repository.
 
 > Status: work in progress. This is a fork being adapted to the Neo4j 4.4 CE
 > dialect (keywords, clauses and functions). Highlighting coverage is still
@@ -30,7 +31,8 @@ on first load, so no prebuilt binary is committed to this repo.
 ## Credits
 
 - Original Zed extension by Hari Bantwal — <https://github.com/pupli/cypher>
-- Grammar: [`pupli/tree-sitter-cypher`](https://github.com/pupli/tree-sitter-cypher)
+- Grammar: [`TTorr3s/tree-sitter-cypher-neo4j`](https://github.com/TTorr3s/tree-sitter-cypher-neo4j),
+  forked from [`pupli/tree-sitter-cypher`](https://github.com/pupli/tree-sitter-cypher)
 - [openCypher](https://opencypher.org/) project for the language reference
 
 ## License
