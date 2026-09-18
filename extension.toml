@@ -8,4 +8,4 @@ repository = "https://github.com/TTorr3s/cypher-neo4j"
 
 [grammars.cypher]
 repository = "https://github.com/TTorr3s/tree-sitter-cypher-neo4j"
-commit = "17d10c19d143efbe8f42ba834d72f91a6286ab4c"
+commit = "28cd131e649789f33414cba3cd23fdfa862efcd3"
