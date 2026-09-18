@@ -3553,5 +3553,910 @@
     "prefix": "apoc.xml.parse",
     "body": "apoc.xml.parse(${1:data}, ${2:'/'}, ${3:config}, ${4:false})",
     "description": "[APOC func] RETURN apoc.xml.parse(<xml string>, <xPath string>, config, false) AS value"
+  },
+  "abs": {
+    "prefix": "abs",
+    "body": "abs(${1})",
+    "description": "[fn] Returns the absolute value of an integer."
+  },
+  "acos": {
+    "prefix": "acos",
+    "body": "acos(${1})",
+    "description": "[fn] Returns the arccosine of a number in radians."
+  },
+  "all": {
+    "prefix": "all",
+    "body": "all(${1:x} IN ${2:list} WHERE ${3:predicate})",
+    "description": "[fn] Returns true if the predicate holds for all elements in the given list."
+  },
+  "any": {
+    "prefix": "any",
+    "body": "any(${1:x} IN ${2:list} WHERE ${3:predicate})",
+    "description": "[fn] Returns true if the predicate holds for at least one element in the given list."
+  },
+  "asin": {
+    "prefix": "asin",
+    "body": "asin(${1})",
+    "description": "[fn] Returns the arcsine of a number in radians."
+  },
+  "atan": {
+    "prefix": "atan",
+    "body": "atan(${1})",
+    "description": "[fn] Returns the arctangent of a number in radians."
+  },
+  "atan2": {
+    "prefix": "atan2",
+    "body": "atan2(${1})",
+    "description": "[fn] Returns the arctangent2 of a set of coordinates in radians."
+  },
+  "avg": {
+    "prefix": "avg",
+    "body": "avg(${1})",
+    "description": "[fn] Returns the average of a set of integer values."
+  },
+  "ceil": {
+    "prefix": "ceil",
+    "body": "ceil(${1})",
+    "description": "[fn] Returns the smallest floating point number that is greater than or equal to a number and equal to a mathematical integer."
+  },
+  "coalesce": {
+    "prefix": "coalesce",
+    "body": "coalesce(${1})",
+    "description": "[fn] Returns the first non-null value in a list of expressions."
+  },
+  "collect": {
+    "prefix": "collect",
+    "body": "collect(${1})",
+    "description": "[fn] Returns a list containing the values returned by an expression."
+  },
+  "cos": {
+    "prefix": "cos",
+    "body": "cos(${1})",
+    "description": "[fn] Returns the cosine of a number."
+  },
+  "cot": {
+    "prefix": "cot",
+    "body": "cot(${1})",
+    "description": "[fn] Returns the cotangent of a number."
+  },
+  "count": {
+    "prefix": "count",
+    "body": "count(${1})",
+    "description": "[fn] Returns the number of values or rows."
+  },
+  "date": {
+    "prefix": "date",
+    "body": "date(${1})",
+    "description": "[fn] Create a Date instant."
+  },
+  "date.realtime": {
+    "prefix": "date.realtime",
+    "body": "date.realtime(${1})",
+    "description": "[fn] Get the current Date instant using the realtime clock."
+  },
+  "date.statement": {
+    "prefix": "date.statement",
+    "body": "date.statement(${1})",
+    "description": "[fn] Get the current Date instant using the statement clock."
+  },
+  "date.transaction": {
+    "prefix": "date.transaction",
+    "body": "date.transaction(${1})",
+    "description": "[fn] Get the current Date instant using the transaction clock."
+  },
+  "date.truncate": {
+    "prefix": "date.truncate",
+    "body": "date.truncate(${1})",
+    "description": "[fn] Truncate the input temporal value to a Date instant using the specified unit."
+  },
+  "datetime": {
+    "prefix": "datetime",
+    "body": "datetime(${1})",
+    "description": "[fn] Create a DateTime instant."
+  },
+  "datetime.fromepoch": {
+    "prefix": "datetime.fromepoch",
+    "body": "datetime.fromepoch(${1})",
+    "description": "[fn] Create a DateTime given the seconds and nanoseconds since the start of the epoch."
+  },
+  "datetime.fromepochmillis": {
+    "prefix": "datetime.fromepochmillis",
+    "body": "datetime.fromepochmillis(${1})",
+    "description": "[fn] Create a DateTime given the milliseconds since the start of the epoch."
+  },
+  "datetime.realtime": {
+    "prefix": "datetime.realtime",
+    "body": "datetime.realtime(${1})",
+    "description": "[fn] Get the current DateTime instant using the realtime clock."
+  },
+  "datetime.statement": {
+    "prefix": "datetime.statement",
+    "body": "datetime.statement(${1})",
+    "description": "[fn] Get the current DateTime instant using the statement clock."
+  },
+  "datetime.transaction": {
+    "prefix": "datetime.transaction",
+    "body": "datetime.transaction(${1})",
+    "description": "[fn] Get the current DateTime instant using the transaction clock."
+  },
+  "datetime.truncate": {
+    "prefix": "datetime.truncate",
+    "body": "datetime.truncate(${1})",
+    "description": "[fn] Truncate the input temporal value to a DateTime instant using the specified unit."
+  },
+  "degrees": {
+    "prefix": "degrees",
+    "body": "degrees(${1})",
+    "description": "[fn] Converts radians to degrees."
+  },
+  "duration": {
+    "prefix": "duration",
+    "body": "duration(${1})",
+    "description": "[fn] Construct a Duration value."
+  },
+  "duration.between": {
+    "prefix": "duration.between",
+    "body": "duration.between(${1})",
+    "description": "[fn] Compute the duration between the 'from' instant (inclusive) and the 'to' instant (exclusive) in logical units."
+  },
+  "duration.inDays": {
+    "prefix": "duration.inDays",
+    "body": "duration.inDays(${1})",
+    "description": "[fn] Compute the duration between the 'from' instant (inclusive) and the 'to' instant (exclusive) in days."
+  },
+  "duration.inMonths": {
+    "prefix": "duration.inMonths",
+    "body": "duration.inMonths(${1})",
+    "description": "[fn] Compute the duration between the 'from' instant (inclusive) and the 'to' instant (exclusive) in months."
+  },
+  "duration.inSeconds": {
+    "prefix": "duration.inSeconds",
+    "body": "duration.inSeconds(${1})",
+    "description": "[fn] Compute the duration between the 'from' instant (inclusive) and the 'to' instant (exclusive) in seconds."
+  },
+  "e": {
+    "prefix": "e",
+    "body": "e()",
+    "description": "[fn] Returns the base of the natural logarithm, e."
+  },
+  "endNode": {
+    "prefix": "endNode",
+    "body": "endNode(${1})",
+    "description": "[fn] Returns the end node of a relationship."
+  },
+  "exists": {
+    "prefix": "exists",
+    "body": "exists(${1:pattern})",
+    "description": "[fn] Returns true if a match for the pattern exists in the graph, or if the specified property exists in the node, relationship or map."
+  },
+  "exp": {
+    "prefix": "exp",
+    "body": "exp(${1})",
+    "description": "[fn] Returns e^n, where e is the base of the natural logarithm, and n is the value of the argument expression."
+  },
+  "file": {
+    "prefix": "file",
+    "body": "file(${1})",
+    "description": "[fn] Returns the absolute path of the file that LOAD CSV is using."
+  },
+  "floor": {
+    "prefix": "floor",
+    "body": "floor(${1})",
+    "description": "[fn] Returns the largest floating point number that is less than or equal to a number and equal to a mathematical integer."
+  },
+  "haversin": {
+    "prefix": "haversin",
+    "body": "haversin(${1})",
+    "description": "[fn] Returns half the versine of a number."
+  },
+  "head": {
+    "prefix": "head",
+    "body": "head(${1})",
+    "description": "[fn] Returns the first element in a list."
+  },
+  "id": {
+    "prefix": "id",
+    "body": "id(${1})",
+    "description": "[fn] Returns the id of a node."
+  },
+  "isEmpty": {
+    "prefix": "isEmpty",
+    "body": "isEmpty(${1})",
+    "description": "[fn] Checks whether a list is empty."
+  },
+  "keys": {
+    "prefix": "keys",
+    "body": "keys(${1})",
+    "description": "[fn] Returns a list containing the string representations for all the property names of a node."
+  },
+  "labels": {
+    "prefix": "labels",
+    "body": "labels(${1})",
+    "description": "[fn] Returns a list containing the string representations for all the labels of a node."
+  },
+  "last": {
+    "prefix": "last",
+    "body": "last(${1})",
+    "description": "[fn] Returns the last element in a list."
+  },
+  "left": {
+    "prefix": "left",
+    "body": "left(${1})",
+    "description": "[fn] Returns a string containing the specified number of leftmost characters of the original string."
+  },
+  "length": {
+    "prefix": "length",
+    "body": "length(${1})",
+    "description": "[fn] Returns the length of a path."
+  },
+  "linenumber": {
+    "prefix": "linenumber",
+    "body": "linenumber(${1})",
+    "description": "[fn] Returns the line number that LOAD CSV is currently using."
+  },
+  "localdatetime": {
+    "prefix": "localdatetime",
+    "body": "localdatetime(${1})",
+    "description": "[fn] Create a LocalDateTime instant."
+  },
+  "localdatetime.realtime": {
+    "prefix": "localdatetime.realtime",
+    "body": "localdatetime.realtime(${1})",
+    "description": "[fn] Get the current LocalDateTime instant using the realtime clock."
+  },
+  "localdatetime.statement": {
+    "prefix": "localdatetime.statement",
+    "body": "localdatetime.statement(${1})",
+    "description": "[fn] Get the current LocalDateTime instant using the statement clock."
+  },
+  "localdatetime.transaction": {
+    "prefix": "localdatetime.transaction",
+    "body": "localdatetime.transaction(${1})",
+    "description": "[fn] Get the current LocalDateTime instant using the transaction clock."
+  },
+  "localdatetime.truncate": {
+    "prefix": "localdatetime.truncate",
+    "body": "localdatetime.truncate(${1})",
+    "description": "[fn] Truncate the input temporal value to a LocalDateTime instant using the specified unit."
+  },
+  "localtime": {
+    "prefix": "localtime",
+    "body": "localtime(${1})",
+    "description": "[fn] Create a LocalTime instant."
+  },
+  "localtime.realtime": {
+    "prefix": "localtime.realtime",
+    "body": "localtime.realtime(${1})",
+    "description": "[fn] Get the current LocalTime instant using the realtime clock."
+  },
+  "localtime.statement": {
+    "prefix": "localtime.statement",
+    "body": "localtime.statement(${1})",
+    "description": "[fn] Get the current LocalTime instant using the statement clock."
+  },
+  "localtime.transaction": {
+    "prefix": "localtime.transaction",
+    "body": "localtime.transaction(${1})",
+    "description": "[fn] Get the current LocalTime instant using the transaction clock."
+  },
+  "localtime.truncate": {
+    "prefix": "localtime.truncate",
+    "body": "localtime.truncate(${1})",
+    "description": "[fn] Truncate the input temporal value to a LocalTime instant using the specified unit."
+  },
+  "log": {
+    "prefix": "log",
+    "body": "log(${1})",
+    "description": "[fn] Returns the natural logarithm of a number."
+  },
+  "log10": {
+    "prefix": "log10",
+    "body": "log10(${1})",
+    "description": "[fn] Returns the common logarithm (base 10) of a number."
+  },
+  "ltrim": {
+    "prefix": "ltrim",
+    "body": "ltrim(${1})",
+    "description": "[fn] Returns the original string with leading whitespace removed."
+  },
+  "max": {
+    "prefix": "max",
+    "body": "max(${1})",
+    "description": "[fn] Returns the maximum value in a set of values."
+  },
+  "min": {
+    "prefix": "min",
+    "body": "min(${1})",
+    "description": "[fn] Returns the minimum value in a set of values."
+  },
+  "nodes": {
+    "prefix": "nodes",
+    "body": "nodes(${1})",
+    "description": "[fn] Returns a list containing all the nodes in a path."
+  },
+  "none": {
+    "prefix": "none",
+    "body": "none(${1:x} IN ${2:list} WHERE ${3:predicate})",
+    "description": "[fn] Returns true if the predicate holds for no element in the given list."
+  },
+  "percentileCont": {
+    "prefix": "percentileCont",
+    "body": "percentileCont(${1})",
+    "description": "[fn] Returns the percentile of a value over a group using linear interpolation."
+  },
+  "percentileDisc": {
+    "prefix": "percentileDisc",
+    "body": "percentileDisc(${1})",
+    "description": "[fn] Returns the nearest integer value to the given percentile over a group using a rounding method."
+  },
+  "pi": {
+    "prefix": "pi",
+    "body": "pi()",
+    "description": "[fn] Returns the mathematical constant pi."
+  },
+  "point": {
+    "prefix": "point",
+    "body": "point(${1})",
+    "description": "[fn] Returns a 2D or 3D point object, given two or respectively three coordinate values in the Cartesian coordinate system or WGS 84 geographic coordinate system."
+  },
+  "point.distance": {
+    "prefix": "point.distance",
+    "body": "point.distance(${1})",
+    "description": "[fn] Returns a floating point number representing the geodesic distance between any two points in the same CRS."
+  },
+  "point.withinBBox": {
+    "prefix": "point.withinBBox",
+    "body": "point.withinBBox(${1})",
+    "description": "[fn] Returns true if the provided point is within the bounding box defined by the two provided points."
+  },
+  "properties": {
+    "prefix": "properties",
+    "body": "properties(${1})",
+    "description": "[fn] Returns a map containing all the properties of a node."
+  },
+  "radians": {
+    "prefix": "radians",
+    "body": "radians(${1})",
+    "description": "[fn] Converts degrees to radians."
+  },
+  "rand": {
+    "prefix": "rand",
+    "body": "rand()",
+    "description": "[fn] Returns a random floating point number in the range from 0 (inclusive) to 1 (exclusive); i.e. [0,1)."
+  },
+  "randomUUID": {
+    "prefix": "randomUUID",
+    "body": "randomUUID()",
+    "description": "[fn] Generates a random UUID."
+  },
+  "range": {
+    "prefix": "range",
+    "body": "range(${1})",
+    "description": "[fn] Returns a list comprising all integer values within a specified range."
+  },
+  "reduce": {
+    "prefix": "reduce",
+    "body": "reduce(${1:acc} = ${2:init}, ${3:x} IN ${4:list} | ${5:expr})",
+    "description": "[fn] Runs an expression against individual elements of a list, storing the result of the expression in an accumulator."
+  },
+  "relationships": {
+    "prefix": "relationships",
+    "body": "relationships(${1})",
+    "description": "[fn] Returns a list containing all the relationships in a path."
+  },
+  "replace": {
+    "prefix": "replace",
+    "body": "replace(${1})",
+    "description": "[fn] Returns a string in which all occurrences of a specified search string in the original string have been replaced by another (specified) replace string."
+  },
+  "reverse": {
+    "prefix": "reverse",
+    "body": "reverse(${1})",
+    "description": "[fn] Returns a string in which the order of all characters in the original string have been reversed."
+  },
+  "right": {
+    "prefix": "right",
+    "body": "right(${1})",
+    "description": "[fn] Returns a string containing the specified number of rightmost characters of the original string."
+  },
+  "round": {
+    "prefix": "round",
+    "body": "round(${1})",
+    "description": "[fn] Returns the value of a number rounded to the nearest integer."
+  },
+  "rtrim": {
+    "prefix": "rtrim",
+    "body": "rtrim(${1})",
+    "description": "[fn] Returns the original string with trailing whitespace removed."
+  },
+  "sign": {
+    "prefix": "sign",
+    "body": "sign(${1})",
+    "description": "[fn] Returns the signum of an integer number: 0 if the number is 0, -1 for any negative number, and 1 for any positive number."
+  },
+  "sin": {
+    "prefix": "sin",
+    "body": "sin(${1})",
+    "description": "[fn] Returns the sine of a number."
+  },
+  "single": {
+    "prefix": "single",
+    "body": "single(${1:x} IN ${2:list} WHERE ${3:predicate})",
+    "description": "[fn] Returns true if the predicate holds for exactly one of the elements in the given list."
+  },
+  "size": {
+    "prefix": "size",
+    "body": "size(${1})",
+    "description": "[fn] Returns the number of items in a list."
+  },
+  "split": {
+    "prefix": "split",
+    "body": "split(${1})",
+    "description": "[fn] Returns a list of strings resulting from the splitting of the original string around matches of the given delimiter."
+  },
+  "sqrt": {
+    "prefix": "sqrt",
+    "body": "sqrt(${1})",
+    "description": "[fn] Returns the square root of a number."
+  },
+  "startNode": {
+    "prefix": "startNode",
+    "body": "startNode(${1})",
+    "description": "[fn] Returns the start node of a relationship."
+  },
+  "stdev": {
+    "prefix": "stdev",
+    "body": "stdev(${1})",
+    "description": "[fn] Returns the standard deviation for the given value over a group for a sample of a population."
+  },
+  "stdevp": {
+    "prefix": "stdevp",
+    "body": "stdevp(${1})",
+    "description": "[fn] Returns the standard deviation for the given value over a group for an entire population."
+  },
+  "substring": {
+    "prefix": "substring",
+    "body": "substring(${1})",
+    "description": "[fn] Returns a substring of the original string, beginning with a 0-based index start."
+  },
+  "sum": {
+    "prefix": "sum",
+    "body": "sum(${1})",
+    "description": "[fn] Returns the sum of a set of integers"
+  },
+  "tail": {
+    "prefix": "tail",
+    "body": "tail(${1})",
+    "description": "[fn] Returns all but the first element in a list."
+  },
+  "tan": {
+    "prefix": "tan",
+    "body": "tan(${1})",
+    "description": "[fn] Returns the tangent of a number."
+  },
+  "time": {
+    "prefix": "time",
+    "body": "time(${1})",
+    "description": "[fn] Create a Time instant."
+  },
+  "time.realtime": {
+    "prefix": "time.realtime",
+    "body": "time.realtime(${1})",
+    "description": "[fn] Get the current Time instant using the realtime clock."
+  },
+  "time.statement": {
+    "prefix": "time.statement",
+    "body": "time.statement(${1})",
+    "description": "[fn] Get the current Time instant using the statement clock."
+  },
+  "time.transaction": {
+    "prefix": "time.transaction",
+    "body": "time.transaction(${1})",
+    "description": "[fn] Get the current Time instant using the transaction clock."
+  },
+  "time.truncate": {
+    "prefix": "time.truncate",
+    "body": "time.truncate(${1})",
+    "description": "[fn] Truncate the input temporal value to a Time instant using the specified unit."
+  },
+  "toBoolean": {
+    "prefix": "toBoolean",
+    "body": "toBoolean(${1})",
+    "description": "[fn] Converts a string value to a boolean value."
+  },
+  "toBooleanList": {
+    "prefix": "toBooleanList",
+    "body": "toBooleanList(${1})",
+    "description": "[fn] Converts a list of values to a list of boolean values. If any values are not convertible to boolean they will be null in the list returned."
+  },
+  "toBooleanOrNull": {
+    "prefix": "toBooleanOrNull",
+    "body": "toBooleanOrNull(${1})",
+    "description": "[fn] Converts a value to a boolean value, or null if the value cannot be converted."
+  },
+  "toFloat": {
+    "prefix": "toFloat",
+    "body": "toFloat(${1})",
+    "description": "[fn] Converts a string value to a floating point value."
+  },
+  "toFloatList": {
+    "prefix": "toFloatList",
+    "body": "toFloatList(${1})",
+    "description": "[fn] Converts a list of values to a list of float values. If any values are not convertible to float they will be null in the list returned."
+  },
+  "toFloatOrNull": {
+    "prefix": "toFloatOrNull",
+    "body": "toFloatOrNull(${1})",
+    "description": "[fn] Converts a value to a floating point value, or null if the value cannot be converted."
+  },
+  "toInteger": {
+    "prefix": "toInteger",
+    "body": "toInteger(${1})",
+    "description": "[fn] Converts a string value to an integer value."
+  },
+  "toIntegerList": {
+    "prefix": "toIntegerList",
+    "body": "toIntegerList(${1})",
+    "description": "[fn] Converts a list of values to a list of integer values. If any values are not convertible to integer they will be null in the list returned."
+  },
+  "toIntegerOrNull": {
+    "prefix": "toIntegerOrNull",
+    "body": "toIntegerOrNull(${1})",
+    "description": "[fn] Converts a value to an integer value, or null if the value cannot be converted."
+  },
+  "toLower": {
+    "prefix": "toLower",
+    "body": "toLower(${1})",
+    "description": "[fn] Returns the original string in lowercase."
+  },
+  "toString": {
+    "prefix": "toString",
+    "body": "toString(${1})",
+    "description": "[fn] Converts an integer, float, boolean, point or temporal type (i.e. Date, Time, LocalTime, DateTime, LocalDateTime or Duration) value to a string."
+  },
+  "toStringList": {
+    "prefix": "toStringList",
+    "body": "toStringList(${1})",
+    "description": "[fn] Converts a list of values to a list of string values. If any values are not convertible to string they will be null in the list returned."
+  },
+  "toStringOrNull": {
+    "prefix": "toStringOrNull",
+    "body": "toStringOrNull(${1})",
+    "description": "[fn] Converts an integer, float, boolean, point or temporal type (i.e. Date, Time, LocalTime, DateTime, LocalDateTime or Duration) value to a string, or null if t..."
+  },
+  "toUpper": {
+    "prefix": "toUpper",
+    "body": "toUpper(${1})",
+    "description": "[fn] Returns the original string in uppercase."
+  },
+  "trim": {
+    "prefix": "trim",
+    "body": "trim(${1})",
+    "description": "[fn] Returns the original string with leading and trailing whitespace removed."
+  },
+  "type": {
+    "prefix": "type",
+    "body": "type(${1})",
+    "description": "[fn] Returns the string representation of the relationship type."
+  },
+  "db.awaitIndex": {
+    "prefix": "db.awaitIndex",
+    "body": "db.awaitIndex(${1})",
+    "description": "[proc] Wait for an index to come online (for example: CALL db.awaitIndex(\\\"MyIndex\\\", 300))."
+  },
+  "db.awaitIndexes": {
+    "prefix": "db.awaitIndexes",
+    "body": "db.awaitIndexes(${1})",
+    "description": "[proc] Wait for all indexes to come online (for example: CALL db.awaitIndexes(300))."
+  },
+  "db.clearQueryCaches": {
+    "prefix": "db.clearQueryCaches",
+    "body": "db.clearQueryCaches(${1})",
+    "description": "[proc] Clears all query caches."
+  },
+  "db.constraints": {
+    "prefix": "db.constraints",
+    "body": "db.constraints()",
+    "description": "[proc] List all constraints in the database."
+  },
+  "db.createIndex": {
+    "prefix": "db.createIndex",
+    "body": "db.createIndex(${1})",
+    "description": "[proc] Create a named schema index with specified index provider and configuration (optional). Yield: name, labels, properties, providerName, status"
+  },
+  "db.createLabel": {
+    "prefix": "db.createLabel",
+    "body": "db.createLabel(${1})",
+    "description": "[proc] Create a label"
+  },
+  "db.createProperty": {
+    "prefix": "db.createProperty",
+    "body": "db.createProperty(${1})",
+    "description": "[proc] Create a Property"
+  },
+  "db.createRelationshipType": {
+    "prefix": "db.createRelationshipType",
+    "body": "db.createRelationshipType(${1})",
+    "description": "[proc] Create a RelationshipType"
+  },
+  "db.createUniquePropertyConstraint": {
+    "prefix": "db.createUniquePropertyConstraint",
+    "body": "db.createUniquePropertyConstraint(${1})",
+    "description": "[proc] Create a named unique property constraint. Backing index will use specified index provider and configuration (optional). Yield: name, labels, properties, pro..."
+  },
+  "db.index.fulltext.awaitEventuallyConsistentIndexRefresh": {
+    "prefix": "db.index.fulltext.awaitEventuallyConsistentIndexRefresh",
+    "body": "db.index.fulltext.awaitEventuallyConsistentIndexRefresh(${1})",
+    "description": "[proc] Wait for the updates from recently committed transactions to be applied to any eventually-consistent full-text indexes."
+  },
+  "db.index.fulltext.createNodeIndex": {
+    "prefix": "db.index.fulltext.createNodeIndex",
+    "body": "db.index.fulltext.createNodeIndex(${1})",
+    "description": "[proc] Create a node full-text index for the given labels and properties. The optional 'config' map parameter can be used to supply settings to the index. Supported..."
+  },
+  "db.index.fulltext.createRelationshipIndex": {
+    "prefix": "db.index.fulltext.createRelationshipIndex",
+    "body": "db.index.fulltext.createRelationshipIndex(${1})",
+    "description": "[proc] Create a relationship full-text index for the given relationship types and properties. The optional 'config' map parameter can be used to supply settings to ..."
+  },
+  "db.index.fulltext.drop": {
+    "prefix": "db.index.fulltext.drop",
+    "body": "db.index.fulltext.drop(${1})",
+    "description": "[proc] Drop the specified index."
+  },
+  "db.index.fulltext.listAvailableAnalyzers": {
+    "prefix": "db.index.fulltext.listAvailableAnalyzers",
+    "body": "db.index.fulltext.listAvailableAnalyzers(${1})",
+    "description": "[proc] List the available analyzers that the full-text indexes can be configured with."
+  },
+  "db.index.fulltext.queryNodes": {
+    "prefix": "db.index.fulltext.queryNodes",
+    "body": "db.index.fulltext.queryNodes(${1})",
+    "description": "[proc] Query the given full-text index. Returns the matching nodes, and their Lucene query score, ordered by score. Valid keys for the options map are: 'skip' to sk..."
+  },
+  "db.index.fulltext.queryRelationships": {
+    "prefix": "db.index.fulltext.queryRelationships",
+    "body": "db.index.fulltext.queryRelationships(${1})",
+    "description": "[proc] Query the given full-text index. Returns the matching relationships, and their Lucene query score, ordered by score. Valid keys for the options map are: 'ski..."
+  },
+  "db.indexDetails": {
+    "prefix": "db.indexDetails",
+    "body": "db.indexDetails(${1})",
+    "description": "[proc] Detailed description of specific index."
+  },
+  "db.indexes": {
+    "prefix": "db.indexes",
+    "body": "db.indexes()",
+    "description": "[proc] List all indexes in the database."
+  },
+  "db.info": {
+    "prefix": "db.info",
+    "body": "db.info(${1})",
+    "description": "[proc] Provides information regarding the database."
+  },
+  "db.labels": {
+    "prefix": "db.labels",
+    "body": "db.labels()",
+    "description": "[proc] List all available labels in the database."
+  },
+  "db.ping": {
+    "prefix": "db.ping",
+    "body": "db.ping(${1})",
+    "description": "[proc] This procedure can be used by client side tooling to test whether they are correctly connected to a database. The procedure is available in all databases and..."
+  },
+  "db.prepareForReplanning": {
+    "prefix": "db.prepareForReplanning",
+    "body": "db.prepareForReplanning(${1})",
+    "description": "[proc] Triggers an index resample and waits for it to complete, and after that clears query caches. After this procedure has finished queries will be planned using ..."
+  },
+  "db.propertyKeys": {
+    "prefix": "db.propertyKeys",
+    "body": "db.propertyKeys()",
+    "description": "[proc] List all property keys in the database."
+  },
+  "db.relationshipTypes": {
+    "prefix": "db.relationshipTypes",
+    "body": "db.relationshipTypes()",
+    "description": "[proc] List all available relationship types in the database."
+  },
+  "db.resampleIndex": {
+    "prefix": "db.resampleIndex",
+    "body": "db.resampleIndex(${1})",
+    "description": "[proc] Schedule resampling of an index (for example: CALL db.resampleIndex(\\\"MyIndex\\\"))."
+  },
+  "db.resampleOutdatedIndexes": {
+    "prefix": "db.resampleOutdatedIndexes",
+    "body": "db.resampleOutdatedIndexes(${1})",
+    "description": "[proc] Schedule resampling of all outdated indexes."
+  },
+  "db.schema.nodeTypeProperties": {
+    "prefix": "db.schema.nodeTypeProperties",
+    "body": "db.schema.nodeTypeProperties(${1})",
+    "description": "[proc] Show the derived property schema of the nodes in tabular form."
+  },
+  "db.schema.relTypeProperties": {
+    "prefix": "db.schema.relTypeProperties",
+    "body": "db.schema.relTypeProperties(${1})",
+    "description": "[proc] Show the derived property schema of the relationships in tabular form."
+  },
+  "db.schema.visualization": {
+    "prefix": "db.schema.visualization",
+    "body": "db.schema.visualization()",
+    "description": "[proc] Visualizes the schema of the data based on available statistics. A new node is returned for each label. The properties represented on the node include: `name..."
+  },
+  "db.schemaStatements": {
+    "prefix": "db.schemaStatements",
+    "body": "db.schemaStatements(${1})",
+    "description": "[proc] List all statements for creating and dropping existing indexes and constraints. Note that only index types introduced before Neo4j 4.3 are included."
+  },
+  "db.stats.clear": {
+    "prefix": "db.stats.clear",
+    "body": "db.stats.clear(${1})",
+    "description": "[proc] Clear collected data of a given data section. Valid sections are 'QUERIES'"
+  },
+  "db.stats.collect": {
+    "prefix": "db.stats.collect",
+    "body": "db.stats.collect(${1})",
+    "description": "[proc] Start data collection of a given data section. Valid sections are 'QUERIES'"
+  },
+  "db.stats.retrieve": {
+    "prefix": "db.stats.retrieve",
+    "body": "db.stats.retrieve(${1})",
+    "description": "[proc] Retrieve statistical data about the current database. Valid sections are 'GRAPH COUNTS', 'TOKENS', 'QUERIES', 'META'"
+  },
+  "db.stats.retrieveAllAnonymized": {
+    "prefix": "db.stats.retrieveAllAnonymized",
+    "body": "db.stats.retrieveAllAnonymized(${1})",
+    "description": "[proc] Retrieve all available statistical data about the current database, in an anonymized form."
+  },
+  "db.stats.status": {
+    "prefix": "db.stats.status",
+    "body": "db.stats.status(${1})",
+    "description": "[proc] Retrieve the status of all available collector daemons, for this database."
+  },
+  "db.stats.stop": {
+    "prefix": "db.stats.stop",
+    "body": "db.stats.stop(${1})",
+    "description": "[proc] Stop data collection of a given data section. Valid sections are 'QUERIES'"
+  },
+  "dbms.cluster.routing.getRoutingTable": {
+    "prefix": "dbms.cluster.routing.getRoutingTable",
+    "body": "dbms.cluster.routing.getRoutingTable(${1})",
+    "description": "[proc] Returns endpoints of this instance."
+  },
+  "dbms.components": {
+    "prefix": "dbms.components",
+    "body": "dbms.components()",
+    "description": "[proc] List DBMS components and their versions."
+  },
+  "dbms.database.state": {
+    "prefix": "dbms.database.state",
+    "body": "dbms.database.state(${1})",
+    "description": "[proc] The actual status of the database with the provided name on this neo4j instance."
+  },
+  "dbms.functions": {
+    "prefix": "dbms.functions",
+    "body": "dbms.functions()",
+    "description": "[proc] List all functions in the DBMS."
+  },
+  "dbms.info": {
+    "prefix": "dbms.info",
+    "body": "dbms.info(${1})",
+    "description": "[proc] Provides information regarding the DBMS."
+  },
+  "dbms.killConnection": {
+    "prefix": "dbms.killConnection",
+    "body": "dbms.killConnection(${1})",
+    "description": "[proc] Kill network connection with the given connection id."
+  },
+  "dbms.killConnections": {
+    "prefix": "dbms.killConnections",
+    "body": "dbms.killConnections(${1})",
+    "description": "[proc] Kill all network connections with the given connection ids."
+  },
+  "dbms.killQueries": {
+    "prefix": "dbms.killQueries",
+    "body": "dbms.killQueries(${1})",
+    "description": "[proc] Kill all transactions executing a query with any of the given query ids."
+  },
+  "dbms.killQuery": {
+    "prefix": "dbms.killQuery",
+    "body": "dbms.killQuery(${1})",
+    "description": "[proc] Kill all transactions executing the query with the given query id."
+  },
+  "dbms.killTransaction": {
+    "prefix": "dbms.killTransaction",
+    "body": "dbms.killTransaction(${1})",
+    "description": "[proc] Kill transaction with provided id."
+  },
+  "dbms.killTransactions": {
+    "prefix": "dbms.killTransactions",
+    "body": "dbms.killTransactions(${1})",
+    "description": "[proc] Kill transactions with provided ids."
+  },
+  "dbms.listCapabilities": {
+    "prefix": "dbms.listCapabilities",
+    "body": "dbms.listCapabilities(${1})",
+    "description": "[proc] List capabilities"
+  },
+  "dbms.listConfig": {
+    "prefix": "dbms.listConfig",
+    "body": "dbms.listConfig(${1})",
+    "description": "[proc] List the currently active config of Neo4j."
+  },
+  "dbms.listConnections": {
+    "prefix": "dbms.listConnections",
+    "body": "dbms.listConnections(${1})",
+    "description": "[proc] List all accepted network connections at this instance that are visible to the user."
+  },
+  "dbms.listQueries": {
+    "prefix": "dbms.listQueries",
+    "body": "dbms.listQueries(${1})",
+    "description": "[proc] List all queries currently executing at this instance that are visible to the user."
+  },
+  "dbms.listTransactions": {
+    "prefix": "dbms.listTransactions",
+    "body": "dbms.listTransactions(${1})",
+    "description": "[proc] List all transactions currently executing at this instance that are visible to the user."
+  },
+  "dbms.procedures": {
+    "prefix": "dbms.procedures",
+    "body": "dbms.procedures()",
+    "description": "[proc] List all procedures in the DBMS."
+  },
+  "dbms.queryJmx": {
+    "prefix": "dbms.queryJmx",
+    "body": "dbms.queryJmx(${1})",
+    "description": "[proc] Query JMX management data by domain and name. For instance, \\\"*:*\\\""
+  },
+  "dbms.routing.getRoutingTable": {
+    "prefix": "dbms.routing.getRoutingTable",
+    "body": "dbms.routing.getRoutingTable(${1})",
+    "description": "[proc] Returns endpoints of this instance."
+  },
+  "dbms.security.changePassword": {
+    "prefix": "dbms.security.changePassword",
+    "body": "dbms.security.changePassword(${1})",
+    "description": "[proc] Change the current user's password."
+  },
+  "dbms.security.createUser": {
+    "prefix": "dbms.security.createUser",
+    "body": "dbms.security.createUser(${1})",
+    "description": "[proc] Create a new user."
+  },
+  "dbms.security.deleteUser": {
+    "prefix": "dbms.security.deleteUser",
+    "body": "dbms.security.deleteUser(${1})",
+    "description": "[proc] Delete the specified user."
+  },
+  "dbms.security.listUsers": {
+    "prefix": "dbms.security.listUsers",
+    "body": "dbms.security.listUsers(${1})",
+    "description": "[proc] List all native users."
+  },
+  "dbms.showCurrentUser": {
+    "prefix": "dbms.showCurrentUser",
+    "body": "dbms.showCurrentUser(${1})",
+    "description": "[proc] Show the current user."
+  },
+  "dbms.upgrade": {
+    "prefix": "dbms.upgrade",
+    "body": "dbms.upgrade(${1})",
+    "description": "[proc] Upgrade the system database schema if it is not the current schema."
+  },
+  "dbms.upgradeStatus": {
+    "prefix": "dbms.upgradeStatus",
+    "body": "dbms.upgradeStatus(${1})",
+    "description": "[proc] Report the current status of the system database sub-graph schema."
+  },
+  "tx.getMetaData": {
+    "prefix": "tx.getMetaData",
+    "body": "tx.getMetaData(${1})",
+    "description": "[proc] Provides attached transaction metadata."
+  },
+  "tx.setMetaData": {
+    "prefix": "tx.setMetaData",
+    "body": "tx.setMetaData(${1})",
+    "description": "[proc] Attaches a map of data to the transaction. The data will be printed when listing queries, and inserted into the query log."
   }
 }
