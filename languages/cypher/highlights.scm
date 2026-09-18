@@ -83,6 +83,8 @@
   "unique" "node" "relationship" "rel" "key" "property"
   "existence" "exist"
   "btree" "fulltext" "lookup" "range" "text" "point"
+  ; CALL {} subqueries
+  "transactions" "of" "rows" "row"
 ] @keyword
 
 ; Boolean / predicate operators that are spelled as words
