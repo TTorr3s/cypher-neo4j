@@ -26,6 +26,18 @@
 (function_invocation (function_name) @function)
 (procedure_name) @function               ; db.labels, apoc.*
 
+; Built-in pseudo-functions (parenthesized: reduce/extract/filter, path finders)
+[
+  "reduce"
+  "extract"
+  "filter"
+  "shortestpath"
+  "allshortestpaths"
+] @function
+
+; Map projection all-properties selector  n{.*}
+(all_properties_selector) @punctuation.delimiter
+
 ; --- Keywords -------------------------------------------------------------
 [
   "profile"
