@@ -1,2 +1,7 @@
 grammars
 .DS_Store
+
+# Rust extension build output
+/target
+*.wasm
+extension.wasm

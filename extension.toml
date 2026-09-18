@@ -1,6 +1,6 @@
 id = "cypher-neo4j-44"
 name = "Cypher (Neo4j 4.4)"
-version = "0.0.1"
+version = "0.1.0"
 schema_version = 1
 authors = ["TTorr3s <is.jesustorres@icloud.com>"]
 description = "Syntax highlighting for the Cypher query language, tuned for Neo4j 4.4 Community Edition."
@@ -11,3 +11,7 @@ snippets = ["./snippets/cypher.json"]
 [grammars.cypher]
 repository = "https://github.com/TTorr3s/tree-sitter-cypher-neo4j"
 commit = "a4109d5cc1d21d3a4fbf304cd1aaed42fc3d3972"
+
+[language_servers.cypher-lsp]
+name = "Cypher LSP"
+languages = ["Cypher"]
