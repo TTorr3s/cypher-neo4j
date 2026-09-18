@@ -10,4 +10,4 @@ snippets = ["./snippets/cypher.json"]
 
 [grammars.cypher]
 repository = "https://github.com/TTorr3s/tree-sitter-cypher-neo4j"
-commit = "306fb4eefe08527d1fede9519ae4c8966e8219cb"
+commit = "a4109d5cc1d21d3a4fbf304cd1aaed42fc3d3972"
